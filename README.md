@@ -10,3 +10,4 @@ Save the file<br />
 Run the file with "python3 temperature.py" to make sure it works<br />
 Use systemctl, supervisor, nohup, or any other service daemon to run the file in the background<br />
 An example service file for systemctl is in the source code.<br />
+![Screenshot 2023-03-07 145855](https://user-images.githubusercontent.com/30084485/223573347-3315bb17-b00f-4da3-8011-3b27078689a5.png)
