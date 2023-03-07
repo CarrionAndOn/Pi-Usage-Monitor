@@ -1,0 +1,10 @@
+[Unit]
+Description=Temperature Monitor Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/temperature.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
