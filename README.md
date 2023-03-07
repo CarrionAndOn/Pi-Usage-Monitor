@@ -1,5 +1,6 @@
 # Temperature Monitor
- A python script that monitors the temperature of a Linux system and sends it through a Discord webhook every minute.
+ A python script that monitors the temperature of a Linux system and sends it through a Discord webhook every minute.<br />
+ I am working on adding RAM usage and CPU usage too, but I am stuck on an error and I'm still trying to fix it.
 
 # Installation
 Run "wget https://cdn.carrionandon.me/assets/temperature.py"<br />
