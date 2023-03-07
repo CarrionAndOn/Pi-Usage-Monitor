@@ -3,6 +3,7 @@
  I am working on adding RAM usage and CPU usage too, but I am stuck on an error and I'm still trying to fix it.
 
 # Installation
+<b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX OPERATING SYSTEMS</b><br />
 Run "wget https://cdn.carrionandon.me/assets/temperature.py"<br />
 Open the file with your preferred text editor<br />
 Replace the webhook URL at line 17 with your webhook's URL<br />
