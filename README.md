@@ -16,16 +16,16 @@ Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 <br />
 Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py`<br />
-Run `mv usagemonitor.py /opt/usagemonitor.py` (Optional, you can put it in any directory, but opt is recommended)<br />
-Open the file with your preferred text editor<br />
-Replace the webhook URL at line 17 with your webhook's URL<br />
-Optionally, change the amount of time that it takes to send a new message at the bottom of the script. Default is a minute.<br />
-Save the file<br />
-Run the file with "python3 usagemonitor.py" to make sure it works<br />
+Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.conf`<br />
+Run `nano usagemonitor.conf`<br />
+Change YOUR_WEBHOOK_URL to the URL of your discord webhook.<br />
+Change the time to whatever you want it to be in seconds, or leave it.<br />
+Run `mkdir /opt/usagemonitordiscord/`<br />
+Run `mv usagemonitor.py /opt/usagemonitordiscord/`<br />
+Run `mv usagemonitor.conf /opt/usagemonitordiscord/`<br />
+Run the file with "python3 /opt/usagemonitordiscord/usagemonitor.py" to make sure it works<br />
 Use systemctl, supervisor, nohup, or any other service daemon to run the file in the background<br />
 An example service file for systemctl is in the source code.<br />
-<b>If you use that example service, be sure to change the directory of where it runs the file to where you put the file.</b><br />
 
 # Uninstallation
-Run `systemctl stop usagemonitor && rm /opt/usagemonitor.py && rm /etc/systemd/system/usagemonitor.service`<br />
-The directories may be different if you installed manually.<br />
+Run `systemctl stop usagemonitor && rm -r /opt/usagemonitordiscord && rm /etc/systemd/system/usagemonitor.service`<br />
