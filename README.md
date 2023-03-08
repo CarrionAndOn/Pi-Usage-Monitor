@@ -1,5 +1,6 @@
 # Linux Usage Monitor
 A python script that monitors the temperature (if on Pi), RAM usage, and CPU usage of a linux system and sends it through a Discord webhook every minute.  <br />
+If you're concerned about bandwidth, the script takes up 1.728 MB a <b>month</b> on average. <br />
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
 # Installation
