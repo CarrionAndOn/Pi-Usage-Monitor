@@ -4,6 +4,7 @@
 
 # Installation
 ### `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/install.sh && bash install.sh`<br />
+If what you're installing it on has a graphic desktop, you can download it directly from the releases.<br />
 Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
