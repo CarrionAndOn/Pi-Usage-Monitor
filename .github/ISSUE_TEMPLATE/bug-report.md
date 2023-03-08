@@ -26,6 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **System**
 OS: Ubuntu, Debian, etc.
 Is "psutil" installed? Yes/No
+How did you install the script? Manual/Automatic
 
 **Additional context**
 Add any other context about the problem here.
