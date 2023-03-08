@@ -3,7 +3,7 @@
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
 # Installation
-Run "wget https://cdn.carrionandon.me/assets/install.sh | bash install.sh"<br />
+Run "wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/install.sh | bash install.sh"<br />
 Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
@@ -12,7 +12,7 @@ psutil MUST be installed for this to work.<br />
 Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 <br />
-Run "wget https://cdn.carrionandon.me/assets/usagemonitor.py"<br />
+Run "wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py"<br />
 Open the file with your preferred text editor<br />
 Replace the webhook URL at line 17 with your webhook's URL<br />
 Optionally, change the amount of time that it takes to send a new message at the bottom of the script. Default is a minute.<br />
