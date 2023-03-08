@@ -27,18 +27,18 @@ fi
 
 # Generate a config file
 echo 'Config Creation'
-touch /opt/usagemonitor.conf
+touch /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the Discord webhook URL
 read -p "Enter the Discord webhook URL: " WEBHOOK_URL
 # Add that to the config
-echo "Webhook: $WEBHOOK_URL" >> /opt/usagemonitor.conf
+echo "Webhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the desired time between each message
 read -p "Enter the time between each message in seconds: " TIME
 # Add that to the config too
-echo "Time(Seconds): $TIME" >> /opt/usagemonitor.conf
+echo "Time(Seconds): $TIME" >> /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for if they're on a Pi
 read -p "Are you using a Raspberry Pi for this? Type 'yes' if you are, anything else if you aren't. CASE SENSITIVE. " SYSTEM
-echo "Pi: $SYSTEM" >> /opt/usagemonitor.conf
+echo "Pi: $SYSTEM" >> /opt/usagemonitordiscord/usagemonitor.conf
 
 # Move script to /opt to run
 mkdir /opt/usagemonitordiscord
@@ -52,7 +52,7 @@ cat <<EOF | sudo tee /etc/systemd/system/usagemonitor.service >> $LOG_FILE 2>&1 
 Description=Usage Monitor: Discord
 
 [Service]
-ExecStart=/usr/bin/python3 /opt/usagemonitor.py
+ExecStart=/usr/bin/python3 /opt/usagemonitordiscod/usagemonitor.py
 Restart=always
 
 [Install]
