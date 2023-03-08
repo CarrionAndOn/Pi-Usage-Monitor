@@ -45,4 +45,3 @@ sudo systemctl daemon-reload >> $LOG_FILE 2>&1 >/dev/null
 sudo systemctl start usagemonitor >> $LOG_FILE 2>&1 >/dev/null
 sudo systemctl enable usagemonitor >> $LOG_FILE 2>&1 >/dev/null
 echo Installed! Check your discord channel where the webhook was set up.
-set +x
