@@ -1,5 +1,5 @@
 # Pi Usage Monitor
- A python script that monitors the temperature, RAM usage, and CPU usage of a Linux system and sends it through a Discord webhook every minute.<br />
+A python script that monitors the temperature, RAM usage, and CPU usage of a Raspberry Pi system and sends it through a Discord webhook every minute. <br />
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
 # Installation
