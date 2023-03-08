@@ -39,9 +39,10 @@ echo 'Installed to /opt/usagemonitordiscord/'
 echo 'Creating service...'
 cat <<EOF | sudo tee /etc/systemd/system/usagemonitor.service >> $LOG_FILE 2>&1 >/dev/null
 [Unit]
-Description=Usage Monitor Service
+Description=Usage Monitor: Discord
 
 [Service]
+User=root
 Type=simple
 ExecStart=/usr/bin/python3 /opt/usagemonitordiscord/usagemonitor.py
 Restart=always
