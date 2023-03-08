@@ -38,7 +38,7 @@ Run `systemctl stop usagemonitor && rm /opt/usagemonitor.* && rm /etc/systemd/sy
 
 # Windows?
 With some modification to the script, it can work on windows.<br />
-It all has to be manually installed, the automatic install was written with Linux in mind and won't work on Windows.<br />
+It all has to be manually installed, the automatic install was written for Linux and won't work on Windows.<br />
 Change the config directory in the script to be "./usagemonitor.conf" instead of /opt/usagemonitor.conf".<br />
 The config file will be regular, the Pi value CANNOT be "yes", put it as anything but yes.<br />
 I do not know any programs that run python scripts in the background on Windows, you will have to figure that out yourself.<br />
