@@ -8,6 +8,10 @@ Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 
 # Installation
+Run "wget https://cdn.carrionandon.me/assets/install.sh | bash install.sh"<br />
+Or, you can install it manually with the instructions below.<br />
+
+# Manual Installation
 <b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX OPERATING SYSTEMS</b><br />
 Run "wget https://cdn.carrionandon.me/assets/usagemonitor.py"<br />
 Open the file with your preferred text editor<br />
