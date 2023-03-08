@@ -3,15 +3,25 @@ import re
 import requests
 import json
 import time
+import psutil
+import os
 
-# Execute the "vcgencmd measure_temp" command and capture the output
+# Get the temperature and capture the output
 output = subprocess.check_output(['vcgencmd', 'measure_temp']).decode('utf-8')
 
 # Extract the temperature value from the output using a regular expression
 temperature = re.findall(r'\d+\.\d+', output)[0]
 
+# Get CPU usage
+cpu_usage = psutil.cpu_percent()
+
+# Get RAM usage
+ram = psutil.virtual_memory()
+total_ram = round(ram.total / (1024.0 ** 3), 2)
+used_ram = round(ram.used / (1024.0 ** 3), 2)
+
 # Build the message to send to the Discord webhook
-message = f"Temp: {temperature}°C"
+message = f"Temp: {temperature}°C\nRAM: {used_ram} GB used of {total_ram} GB\nCPU: {cpu_usage}% {"
 
 # Define the Discord webhook URL
 webhook_url = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"

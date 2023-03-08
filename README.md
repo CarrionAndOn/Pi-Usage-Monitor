@@ -1,6 +1,11 @@
-# Temperature Monitor
- A python script that monitors the temperature of a Linux system and sends it through a Discord webhook every minute.<br />
- I am working on adding RAM usage and CPU usage too, but I am stuck on an error and I'm still trying to fix it.
+# Usage Monitor
+ A python script that monitors the temperature, RAM usage, and CPU usage of a Linux system and sends it through a Discord webhook every minute.<br />
+
+
+# Dependencies
+psutil MUST be installed for this to work.<br />
+Install it with "pip install psutil"<br />
+If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 
 # Installation
 <b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX OPERATING SYSTEMS</b><br />
