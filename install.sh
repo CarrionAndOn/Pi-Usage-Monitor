@@ -5,18 +5,25 @@ LOG_FILE=$(dirname $0)/install.log
 touch $LOG_FILE
 
 # Check if psutil is installed
-if ! command -v pip3 &> /dev/null
-then
+if ! command -v pip3 &> /dev/null; then
     # Install psutil
-	echo 'Installing psutil...'
-    sudo apt-get update >> $LOG_FILE 2>&1 >/dev/null
-    sudo apt-get install python3-pip -y >> $LOG_FILE 2>&1 >/dev/null
-    pip3 install psutil >> $LOG_FILE 2>&1 >/dev/null
+    echo 'Installing psutil...'
+    sudo apt-get update >> $LOG_FILE 2>&1
+    sudo apt-get install python3-pip -y >> $LOG_FILE 2>&1
+	# Error handling for if psutil fails to install
+    if ! pip3 install psutil >> $LOG_FILE 2>&1; then
+        echo 'Failed to install psutil.' >&2
+        exit 1
+    fi
 fi
 
 # Download the usage monitor python script to /home
 echo 'Installing script...'
-wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py -P ~/ >> $LOG_FILE 2>&1 >/dev/null
+# Error handling for if wget fails to download the script
+if ! wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py -P ~/ >> $LOG_FILE 2>&1; then
+    echo 'Failed to download the script.' >&2
+    exit 1
+fi
 
 # Generate a config file
 echo 'Config Creation'
@@ -34,8 +41,9 @@ read -p "Are you using a Raspberry Pi for this? Type 'yes' if you are, anything 
 echo "Pi: $SYSTEM" >> /opt/usagemonitor.conf
 
 # Move script to /opt to run
-sudo mv ~/usagemonitor.py /opt/
-echo 'Installed to /opt/'
+mkdir /opt/usagemonitordiscord
+sudo mv ~/usagemonitor.py /opt/usagemonitordiscord
+echo 'Installed to /opt/usagemonitordiscord'
 
 # Create a systemd service for the script
 echo 'Creating service...'
@@ -52,8 +60,16 @@ WantedBy=multi-user.target
 EOF
 
 # Start and enable the service
-echo 'Enabling service...'
+echo 'Pre-fixing any possible issues with systemd...'
+sudo systemctl daemon-reexec >> $LOG_FILE 2>&1 >/dev/null
+echo 'Reloading systemd...'
 sudo systemctl daemon-reload >> $LOG_FILE 2>&1 >/dev/null
-sudo systemctl start usagemonitor >> $LOG_FILE 2>&1 >/dev/null
+echo 'Starting service...'
+# Error handling for if the service fails to start.
+if ! sudo systemctl start usagemonitor >> $LOG_FILE 2>&1; then
+    echo 'Failed to start the service.' >&2
+    exit 1
+fi
+echo 'Setting service to open on startup...'
 sudo systemctl enable usagemonitor >> $LOG_FILE 2>&1 >/dev/null
 echo 'Installed! Check your discord channel where the webhook was set up.'
