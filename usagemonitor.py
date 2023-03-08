@@ -11,7 +11,7 @@ with open('/opt/usagemonitor.conf', 'r') as file:
     config_data = file.read()
 webhook_url = config_data.split("Webhook: ")[1].split("\n")[0]
 time_seconds = int(config_data.split('Time(Seconds): ')[1].split('\n')[0])
-pi = int(config_data.split('Pi: ')[1].split('\n')[0])
+pi = config_data.split("Pi: ")[1].split('\n')[0]
 
 # Check if on Pi based on what the user said
 if pi == "yes":

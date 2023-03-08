@@ -44,7 +44,6 @@ cat <<EOF | sudo tee /etc/systemd/system/usagemonitor.service >> $LOG_FILE 2>&1 
 Description=Usage Monitor: Discord
 
 [Service]
-Type=simple
 ExecStart=/usr/bin/python3 /opt/usagemonitor.py
 Restart=always
 
