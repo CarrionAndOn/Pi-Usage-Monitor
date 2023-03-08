@@ -11,7 +11,8 @@ If the OS you installed onto your Pi has a graphic desktop, you can download it 
 Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
-<b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER OPERATING SYSTEMS ON THE PI.</b><br />
+<b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX DISTROS.</b><br />
+<b>THIS WILL LIKELY NOT WORK ON WINDOWS.</b><br />
 psutil MUST be installed for this to work.<br />
 Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
