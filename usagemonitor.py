@@ -7,16 +7,8 @@ import psutil
 import os
 
 # Set the config file path and get it's values
-CONFIG_FILE = './usagemonitor.conf'
-try:
-    with open(CONFIG_FILE, 'r') as file:
-        config_data = file.read()
-# Error handling for if the file can't be found
-except FileNotFoundError:
-    # log the error message to the install log
-    touch ./error.log
-    echo "Config file was not found. Check the install directory and make sure the config file is valid." >> error.log
-    exit 1
+with open('./usagemonitor.conf', 'r') as file:
+    config_data = file.read()
 webhook_url = config_data.split("Webhook: ")[1].split("\n")[0]
 time_seconds = int(config_data.split('Time(Seconds): ')[1].split('\n')[0])
 pi = config_data.split("Pi: ")[1].split('\n')[0]
