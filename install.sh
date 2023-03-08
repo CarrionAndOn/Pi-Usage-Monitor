@@ -20,15 +20,16 @@ wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usa
 
 # Generate a config file
 echo 'Config Creation'
-touch /opt/usagemonitordiscord/config
+mkdir /opt/usagemonitordiscord/
+touch /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the Discord webhook URL
 read -p "Enter the Discord webhook URL: " WEBHOOK_URL
 # Add that to the config
-echo "$s\n Webhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/config
+echo "$s Webhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the desired time between each message
 read -p "Enter the time between each message in seconds: " TIME
 # Add that to the config too
-echo "$s\n Time(Seconds): $TIME" >> /opt/usagemonitordiscord/config
+echo "$s\n Time(Seconds): $TIME" >> /opt/usagemonitordiscord/usagemonitor.conf
 
 # Move script to /opt to run
 sudo mv ~/usagemonitor.py /opt/usagemonitordiscord/

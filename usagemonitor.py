@@ -7,7 +7,7 @@ import psutil
 import os
 
 # Set the config file path and get it's values
-config_file_path = "/opt/usagemonitordiscord/config"
+config_file_path = "/opt/usagemonitordiscord/usagemonitor.conf"
 webhook_url = config_data.split("Webhook: ")[1].split("\n")[0]
 time_seconds = int(config_data.split("Time(Seconds): ")[1].split("\n")[0])
 
