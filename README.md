@@ -1,5 +1,5 @@
-# Pi Usage Monitor
-A python script that monitors the temperature, RAM usage, and CPU usage of a Raspberry Pi system and sends it through a Discord webhook every minute. <br />
+# Linux Usage Monitor
+A python script that monitors the temperature (if on Pi), RAM usage, and CPU usage of a linux system and sends it through a Discord webhook every minute.  <br />
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
 # Installation
@@ -20,6 +20,8 @@ Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/mai
 Run `nano usagemonitor.conf`<br />
 Change YOUR_WEBHOOK_URL to the URL of your discord webhook.<br />
 Change the time to whatever you want it to be in seconds, or leave it.<br />
+Change "yes/anything_else" to "yes" if you're installing it on a Pi, or literally anything if it's not on a pi.<br />
+<b>IT MUST BE LOWERCASE.</b><br />
 Run `mv usagemonitor.py /opt/`<br />
 Run `mv usagemonitor.conf /opt/`<br />
 Run the file with "python3 /opt/usagemonitor.py" to make sure it works<br />
