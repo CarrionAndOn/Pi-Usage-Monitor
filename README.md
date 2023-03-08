@@ -26,5 +26,9 @@ Run the file with "python3 /opt/usagemonitor.py" to make sure it works<br />
 Use systemctl, supervisor, nohup, or any other service daemon to run the file in the background<br />
 An example service file for systemctl is in the source code.<br />
 
+# Configuration
+If you want to change the webhook URL or the time between each message after install, just edit the `usagemonitor.conf` file<br />
+It is located in /opt/ usually, unless you changed the directories in the scripts.<br />
+
 # Uninstallation
 Run `systemctl stop usagemonitor && rm /opt/usagemonitor.* && rm /etc/systemd/system/usagemonitor.service`<br />
