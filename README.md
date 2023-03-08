@@ -16,6 +16,7 @@ Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 <br />
 Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py`<br />
+Run `mv usagemonitor.py /opt/usagemonitor.py` (Optional, you can put it in any directory, but opt is recommended)<br />
 Open the file with your preferred text editor<br />
 Replace the webhook URL at line 17 with your webhook's URL<br />
 Optionally, change the amount of time that it takes to send a new message at the bottom of the script. Default is a minute.<br />
@@ -26,5 +27,5 @@ An example service file for systemctl is in the source code.<br />
 <b>If you use that example service, be sure to change the directory of where it runs the file to where you put the file.</b><br />
 
 # Uninstallation
-Run `systemctl stop usagemonitor && rm /home/usagemonitor.py && rm /etc/systemd/system/usagemonitor.service`<br />
+Run `systemctl stop usagemonitor && rm /opt/usagemonitor.py && rm /etc/systemd/system/usagemonitor.service`<br />
 The directories may be different if you installed manually.<br />
