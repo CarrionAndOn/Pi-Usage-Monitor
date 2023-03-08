@@ -1,8 +1,9 @@
-# Usage Monitor
+# Pi Usage Monitor
  A python script that monitors the temperature, RAM usage, and CPU usage of a Linux system and sends it through a Discord webhook every minute.<br />
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
 # Installation
+<b>THIS WILL ONLY WORK ON RASPBERRY PI.</b>
 ### `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/install.sh && bash install.sh`<br />
 If what you're installing it on has a graphic desktop, you can download it directly from the releases.<br />
 Or, you can install it manually with the instructions below.<br />
