@@ -37,7 +37,8 @@ It is located in /opt/ usually, unless you changed the directories in the script
 Run `systemctl stop usagemonitor && rm /opt/usagemonitor.* && rm /etc/systemd/system/usagemonitor.service`<br />
 
 # Windows?
-With some modification to the script, it can work on windows. Requests has to be manually installed though.<br />
+With some modification to the script, it can work on windows.<br />
+It all has to be manually installed, the automatic install was written with Linux in mind and won't work on Windows.<br />
 Change the config directory in the script to be "./usagemonitor.conf" instead of /opt/usagemonitor.conf".<br />
 The config file will be regular, the Pi value CANNOT be "yes", put it as anything but yes.<br />
 I do not know any programs that run python scripts in the background on Windows, you will have to figure that out yourself.<br />
