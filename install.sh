@@ -18,14 +18,21 @@ fi
 echo 'Installing script...'
 wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py -P ~/ >> $LOG_FILE 2>&1 >/dev/null
 
+# Generate a config file
+echo 'Config Creation'
+touch /opt/usagemonitordiscord/config
 # Prompt the user for the Discord webhook URL
 read -p "Enter the Discord webhook URL: " WEBHOOK_URL
-
-# Replace the webhook URL in the usagemonitor.py script with the user's input
-sed -i "s|https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN|$WEBHOOK_URL|g" ~/usagemonitor.py >> $LOG_FILE 2>&1 >/dev/null
+# Add that to the config
+echo "$s\n Webhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/config
+# Prompt the user for the desired time between each message
+read -p "Enter the time between each message in seconds: " TIME
+# Add that to the config too
+echo "$s\n Time(Seconds): $TIME" >> /opt/usagemonitordiscord/config
 
 # Move script to /opt to run
-sudo mv ~/usagemonitor.py /opt
+sudo mv ~/usagemonitor.py /opt/usagemonitordiscord/
+echo 'Installed to /opt/usagemonitordiscord/'
 
 # Create a systemd service for the script
 echo 'Creating service...'
@@ -35,7 +42,7 @@ Description=Usage Monitor Service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /opt/usagemonitor.py
+ExecStart=/usr/bin/python3 /opt/usagemonitordiscord/usagemonitor.py
 Restart=always
 
 [Install]
