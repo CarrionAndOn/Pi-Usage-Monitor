@@ -21,7 +21,7 @@ total_ram = round(ram.total / (1024.0 ** 3), 2)
 used_ram = round(ram.used / (1024.0 ** 3), 2)
 
 # Build the message to send to the Discord webhook
-message = f"Temp: {temperature}°C\nRAM: {used_ram} GB used of {total_ram} GB\nCPU: {cpu_usage}% {"
+message = f"Temp: {temperature}°C\nRAM: {used_ram} GB used of {total_ram} GB\nCPU: {cpu_usage}%"
 
 # Define the Discord webhook URL
 webhook_url = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
