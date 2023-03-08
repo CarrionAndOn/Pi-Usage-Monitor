@@ -1,0 +1,10 @@
+[Unit]
+Description=Usage Monitor Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/usagemonitor.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
