@@ -20,12 +20,11 @@ Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/mai
 Run `nano usagemonitor.conf`<br />
 Change YOUR_WEBHOOK_URL to the URL of your discord webhook.<br />
 Change the time to whatever you want it to be in seconds, or leave it.<br />
-Run `mkdir /opt/usagemonitordiscord/`<br />
-Run `mv usagemonitor.py /opt/usagemonitordiscord/`<br />
-Run `mv usagemonitor.conf /opt/usagemonitordiscord/`<br />
-Run the file with "python3 /opt/usagemonitordiscord/usagemonitor.py" to make sure it works<br />
+Run `mv usagemonitor.py /opt/`<br />
+Run `mv usagemonitor.conf /opt/`<br />
+Run the file with "python3 /opt/usagemonitor.py" to make sure it works<br />
 Use systemctl, supervisor, nohup, or any other service daemon to run the file in the background<br />
 An example service file for systemctl is in the source code.<br />
 
 # Uninstallation
-Run `systemctl stop usagemonitor && rm -r /opt/usagemonitordiscord && rm /etc/systemd/system/usagemonitor.service`<br />
+Run `systemctl stop usagemonitor && rm /opt/usagemonitor.* && rm /etc/systemd/system/usagemonitor.service`<br />

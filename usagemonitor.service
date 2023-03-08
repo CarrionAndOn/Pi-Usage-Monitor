@@ -3,7 +3,7 @@ Description=Usage Monitor: Discord
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/usagemonitor.py
+ExecStart=/usr/bin/python3 /opt/usagemonitor.py
 Restart=always
 
 [Install]
