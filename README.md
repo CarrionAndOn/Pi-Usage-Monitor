@@ -5,11 +5,12 @@
 # Installation
 <b>THIS WILL ONLY WORK ON RASPBERRY PI.</b>
 ### `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/install.sh && bash install.sh`<br />
-If what you're installing it on has a graphic desktop, you can download it directly from the releases.<br />
+It will install any dependencies for you if you do not already have them, do not worry about installing them.<br />
+If the OS you installed onto your Pi has a graphic desktop, you can download it directly from the releases.<br />
 Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
-<b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX OPERATING SYSTEMS</b><br />
+<b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER OPERATING SYSTEMS ON THE PI.</b><br />
 psutil MUST be installed for this to work.<br />
 Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
