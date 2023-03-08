@@ -25,11 +25,11 @@ touch /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the Discord webhook URL
 read -p "Enter the Discord webhook URL: " WEBHOOK_URL
 # Add that to the config
-echo "$s Webhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/usagemonitor.conf
+echo "$sWebhook: $WEBHOOK_URL" >> /opt/usagemonitordiscord/usagemonitor.conf
 # Prompt the user for the desired time between each message
 read -p "Enter the time between each message in seconds: " TIME
 # Add that to the config too
-echo "$s\n Time(Seconds): $TIME" >> /opt/usagemonitordiscord/usagemonitor.conf
+echo "$s\nTime(Seconds): $TIME" >> /opt/usagemonitordiscord/usagemonitor.conf
 
 # Move script to /opt to run
 sudo mv ~/usagemonitor.py /opt/usagemonitordiscord/
@@ -42,7 +42,6 @@ cat <<EOF | sudo tee /etc/systemd/system/usagemonitor.service >> $LOG_FILE 2>&1 
 Description=Usage Monitor: Discord
 
 [Service]
-User=root
 Type=simple
 ExecStart=/usr/bin/python3 /opt/usagemonitordiscord/usagemonitor.py
 Restart=always
