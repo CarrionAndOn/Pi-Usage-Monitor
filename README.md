@@ -21,3 +21,7 @@ Run the file with "python3 temperature.py" to make sure it works<br />
 Use systemctl, supervisor, nohup, or any other service daemon to run the file in the background<br />
 An example service file for systemctl is in the source code.<br />
 <b>If you use that example service, be sure to change the directory of where it runs the file to where you put the file.</b><br />
+
+# Uninstallation
+Run "systemctl stop usagemonitor && rm /home/usagemonitor.py && rm /etc/systemd/system/usagemonitor.service"<br />
+The directories may be different if you installed manually.<br />
