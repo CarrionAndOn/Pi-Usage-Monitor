@@ -12,7 +12,6 @@ Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
 <b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX DISTROS.</b><br />
-<b>THIS WILL LIKELY NOT WORK ON WINDOWS.</b><br />
 psutil MUST be installed for this to work.<br />
 Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
@@ -36,3 +35,10 @@ It is located in /opt/ usually, unless you changed the directories in the script
 
 # Uninstallation
 Run `systemctl stop usagemonitor && rm /opt/usagemonitor.* && rm /etc/systemd/system/usagemonitor.service`<br />
+
+# Windows?
+With some modification to the script, it can work on windows. Requests has to be manually installed though.<br />
+Change the config directory in the script to be "./usagemonitor.conf" instead of /opt/usagemonitor.conf".<br />
+The config file will be regular, the Pi value CANNOT be "yes", put it as anything but yes.<br />
+I do not know any programs that run python scripts in the background on Windows, you will have to figure that out yourself.<br />
+If something breaks, this script was written with Linux in mind and not Windows, so expect that.<br />
