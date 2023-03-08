@@ -1,5 +1,5 @@
 [Unit]
-Description=Usage Monitor Service
+Description=Usage Monitor:Discord
 
 [Service]
 Type=simple
