@@ -2,17 +2,16 @@
  A python script that monitors the temperature, RAM usage, and CPU usage of a Linux system and sends it through a Discord webhook every minute.<br />
 ![it work](https://user-images.githubusercontent.com/30084485/223586659-3a030bed-69e8-43c8-8e23-083257df742e.png)<br />
 
-# Dependencies
-psutil MUST be installed for this to work.<br />
-Install it with "pip install psutil"<br />
-If you don't have pip, install python3-pip with "apt install python3-pip"<br />
-
 # Installation
 Run "wget https://cdn.carrionandon.me/assets/install.sh | bash install.sh"<br />
 Or, you can install it manually with the instructions below.<br />
 
 # Manual Installation
 <b>NOTE: I HAVE ONLY TESTED THIS IN UBUNTU, NO IDEA IF IT WORKS IN ANY OTHER LINUX OPERATING SYSTEMS</b><br />
+psutil MUST be installed for this to work.<br />
+Install it with "pip install psutil"<br />
+If you don't have pip, install python3-pip with "apt install python3-pip"<br />
+<br />
 Run "wget https://cdn.carrionandon.me/assets/usagemonitor.py"<br />
 Open the file with your preferred text editor<br />
 Replace the webhook URL at line 17 with your webhook's URL<br />
