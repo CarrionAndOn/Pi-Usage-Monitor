@@ -10,7 +10,7 @@ then
 fi
 
 # Download the usage monitor python script to /home
-wget https://cdn.carrionandon.me/assets/usagemonitor.py -P /home
+wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py -P /home
 
 # Prompt the user for the Discord webhook URL
 read -p "Enter the Discord webhook URL: " WEBHOOK_URL
