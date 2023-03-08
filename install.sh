@@ -30,7 +30,7 @@ read -p "Enter the time between each message in seconds: " TIME
 # Add that to the config too
 echo "Time(Seconds): $TIME" >> /opt/usagemonitor.conf
 # Prompt the user for if they're on a Pi
-read -p "Are you using a Raspberry Pi for this? Type 'yes' if you are, anything else if you aren't. CASE SENSITIVE." SYSTEM
+read -p "Are you using a Raspberry Pi for this? Type 'yes' if you are, anything else if you aren't. CASE SENSITIVE. " SYSTEM
 echo "Pi: $SYSTEM" >> /opt/usagemonitor.conf
 
 # Move script to /opt to run
