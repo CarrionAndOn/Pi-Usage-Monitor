@@ -20,7 +20,7 @@ fi
 # Download the usage monitor python script to /home
 echo 'Installing script...'
 # Error handling for if wget fails to download the script
-if ! wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py -P ~/ >> $LOG_FILE 2>&1; then
+if ! wget https://raw.githubusercontent.com/SoulWithMae/Linux-Usage-Monitor/main/usagemonitor.py -P ~/ >> $LOG_FILE 2>&1; then
     echo 'Failed to download the script.' >&2
     exit 1
 fi
