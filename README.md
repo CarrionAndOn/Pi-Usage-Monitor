@@ -5,7 +5,7 @@ If you're concerned about bandwidth, the script takes up 1.728 MB a <b>month</b>
 
 # Installation
 <b>THIS WILL ONLY WORK ON RASPBERRY PI.</b>
-### `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/install.sh && bash install.sh`<br />
+### `wget https://raw.githubusercontent.com/SoulWithMae/Linux-Usage-Monitor/main/install.sh && bash install.sh`<br />
 It will install any dependencies for you if you do not already have them, do not worry about installing them.<br />
 If the OS you installed onto your Pi has a graphic desktop, you can download it directly from the releases.<br />
 Or, you can install it manually with the instructions below.<br />
