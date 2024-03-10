@@ -16,8 +16,8 @@ psutil MUST be installed for this to work.<br />
 Install it with "pip install psutil"<br />
 If you don't have pip, install python3-pip with "apt install python3-pip"<br />
 <br />
-Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.py`<br />
-Run `wget https://raw.githubusercontent.com/CarrionAndOn/Linux-Usage-Monitor/main/usagemonitor.conf`<br />
+Run `wget https://raw.githubusercontent.com/SoulWithMae/Linux-Usage-Monitor/main/usagemonitor.py`<br />
+Run `wget https://raw.githubusercontent.com/SoulWithMae/Linux-Usage-Monitor/main/usagemonitor.conf`<br />
 Run `nano usagemonitor.conf`<br />
 Change YOUR_WEBHOOK_URL to the URL of your discord webhook.<br />
 Change the time to whatever you want it to be in seconds, or leave it.<br />
